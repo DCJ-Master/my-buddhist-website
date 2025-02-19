@@ -44,6 +44,19 @@
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
         }
+
+        #video-container {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+        }
+
+        #video-container iframe {
+            width: 100%;
+            height: 500px;
+        }
     </style>
 </head>
 
@@ -54,49 +67,55 @@
             <p>เรียนรู้วันสำคัญในพระพุทธศาสนาและความหมายที่ลึกซึ้ง</p>
 
             <div class="row mt-4">
-    <div class="col-md-4">
-        <div class="card">
-            <img src="images/vi1.jpg" class="card-img-top" alt="วันวิสาขบูชา">
-            <div class="card-body">
-                <h5 class="card-title">วันวิสาขบูชา</h5>
-                <p class="card-text">วันประสูติ ตรัสรู้ และปรินิพพานของพระพุทธเจ้า</p>
-                <a href="vi1.html" class="btn btn-warning">อ่านเพิ่มเติม</a>
-            </div>
-        </div>
-    </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/vi1.jpg" class="card-img-top" alt="วันวิสาขบูชา">
+                        <div class="card-body">
+                            <h5 class="card-title">วันวิสาขบูชา</h5>
+                            <p class="card-text">วันประสูติ ตรัสรู้ และปรินิพพานของพระพุทธเจ้า</p>
+                            <a href="vi1.html" class="btn btn-warning">อ่านเพิ่มเติม</a>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="col-md-4">
-        <div class="card">
-            <img src="images/as3.png" class="card-img-top" alt="วันอาสาฬหบูชา">
-            <div class="card-body">
-                <h5 class="card-title">วันอาสาฬหบูชา</h5>
-                <p class="card-text">วันแสดงปฐมเทศนาและเกิดพระรัตนตรัย</p>
-                <a href="as3.html" class="btn btn-warning">อ่านเพิ่มเติม</a>
-            </div>
-        </div>
-    </div>
+                    <div class="card">
+                        <img src="images/as3.png" class="card-img-top" alt="วันอาสาฬหบูชา">
+                        <div class="card-body">
+                            <h5 class="card-title">วันอาสาฬหบูชา</h5>
+                            <p class="card-text">วันแสดงปฐมเทศนาและเกิดพระรัตนตรัย</p>
+                            <a href="as3.html" class="btn btn-warning">อ่านเพิ่มเติม</a>
+                        </div>
+                    </div>
+                </div>
 
-               <div class="col-md-4">
-        <div class="card">
-            <img src="images/ma2.jpg" class="card-img-top" alt="วันมาฆบูชา">
-            <div class="card-body">
-                <h5 class="card-title">วันมาฆบูชา</h5>
-                <p class="card-text">วันที่พระสงฆ์ 1,250 รูปมาประชุมโดยมิได้นัดหมาย</p>
-                <a href="ma2.html" class="btn btn-warning">อ่านเพิ่มเติม</a>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/ma2.jpg" class="card-img-top" alt="วันมาฆบูชา">
+                        <div class="card-body">
+                            <h5 class="card-title">วันมาฆบูชา</h5>
+                            <p class="card-text">วันที่พระสงฆ์ 1,250 รูปมาประชุมโดยมิได้นัดหมาย</p>
+                            <a href="ma2.html" class="btn btn-warning">อ่านเพิ่มเติม</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
 
             <button id="more-info" class="btn btn-warning mt-4">ข้อมูลเพิ่มเติม</button>
             <p id="info" class="mt-3" style="display: none;">วันสำคัญทางพระพุทธศาสนาเป็นโอกาสให้เราเรียนรู้และปฏิบัติตามหลักธรรมเพื่อความสงบสุขในชีวิต</p>
+
+            <!-- This is where the YouTube video will appear -->
+            <div id="video-container">
+                <iframe src="https://www.youtube.com/watch?v=m3wBbirxigA&t=378s" frameborder="0" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 
     <script>
         $(document).ready(function() {
             $('#more-info').click(function() {
-                $('#info').fadeToggle();
+                $('#video-container').fadeToggle();  // Toggle video display on button click
+                $('#info').fadeToggle();  // Toggle text visibility
             });
 
             $('.card').hover(
