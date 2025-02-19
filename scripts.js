@@ -1,6 +1,7 @@
+/* scripts.js */
 $(document).ready(function() {
     $('#more-info').click(function() {
-        $('#info').fadeToggle();
+        $('#info').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/9RZz_UKcLdw" frameborder="0" allowfullscreen></iframe>').fadeToggle();
     });
 
     $('.card').hover(
